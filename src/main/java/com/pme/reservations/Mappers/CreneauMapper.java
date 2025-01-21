@@ -21,7 +21,7 @@ public class CreneauMapper {
 
     private static int convertToHour(String time) {
         String[] parts = time.split("h");
-        if (parts.length != 1) { //LE format est 8h-9h On peut ausssi faire raplace('h','')
+        if (parts.length != 2) { //LE format est 8h-9h On peut ausssi faire raplace('h','')
             throw new IllegalArgumentException("Le format de l'heure est invalide");
         }
         int hour = Integer.parseInt(parts[0]);
